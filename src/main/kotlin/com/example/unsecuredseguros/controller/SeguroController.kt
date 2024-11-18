@@ -4,6 +4,8 @@ import com.example.unsecuredseguros.exception.ValidationException
 import com.example.unsecuredseguros.model.Seguro
 import com.example.unsecuredseguros.service.SeguroService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.HttpStatus
+import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -29,10 +31,10 @@ class SeguroController {
             throw ValidationException("El id no puede estar vacío")
         }
 
-        seguroService.getById(id)
+        val s: Seguro? = seguroService.getById(id)
 
 
-        return null
+        return ResponseEntity(s, HttpStatus.OK)
 
     }
 

@@ -29,4 +29,11 @@ class APIExceptionHandler {
         return ErrorRespuesta(e.message!!, request.requestURI)
     }
 
+    @ExceptionHandler(Exception::class) // Las "clases" (excepciones) que se quieren controlar
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    fun handleGeneric(request: HttpServletRequest, e: Exception) : ErrorRespuesta {
+        return ErrorRespuesta(e.message!!, request.requestURI)
+    }
+
 }

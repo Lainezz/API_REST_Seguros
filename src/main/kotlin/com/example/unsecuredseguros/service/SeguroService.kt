@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class SeguroService {
 
-    fun getById(id: String) {
+    fun getById(id: String): Seguro? {
 
         // LOGICA NEGOCIO
 
@@ -20,6 +20,7 @@ class SeguroService {
             throw NotFoundException("El seguro con id $id no ha sido encontrado")
         }
 
+        return null
     }
 
 }
