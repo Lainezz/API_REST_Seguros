@@ -402,3 +402,6 @@ realizar peticiones a los endpoints protegidos.
 
 ### RESULTADOS DE APRENDIZAJE IMPLICADOS
 
+#### *2.* Desarrolla aplicaciones que gestionan información almacenada en bases de datos relacionales identificando y utilizando mecanismos de conexión.
+
+#### *6.* Programa componentes de acceso a datos identificando las características que debe poseer un componente y utilizando herramientas de desarrollo.
